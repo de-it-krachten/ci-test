@@ -28,4 +28,5 @@ jobs:
 
       - name: Lint code.
         run: |
+          curl -v https://registry-1.docker.io/v2/library/hello-world/manifests/latest
           docker pull hello-world
