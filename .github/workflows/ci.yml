@@ -28,4 +28,4 @@ jobs:
 
       - name: Lint code.
         run: |
-          docker pull hello world
+          docker pull hello-world
