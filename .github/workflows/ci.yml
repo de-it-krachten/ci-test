@@ -1,0 +1,31 @@
+---
+
+name: CI
+
+on:
+  pull_request:
+  push:
+
+defaults:
+  run:
+    working-directory: "de-it-krachten/ci-test"
+
+jobs:
+
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the codebase.
+        uses: actions/checkout@v2
+        with:
+          path: "${{ github.repository }}"
+
+      - name: Set up Python 3.
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+
+      - name: Lint code.
+        run: |
+          git pull hello world
